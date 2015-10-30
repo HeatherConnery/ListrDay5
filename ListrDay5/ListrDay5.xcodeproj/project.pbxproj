@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B6199B6A1BE4156D00D986EF /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6199B691BE4156D00D986EF /* ToDoItem.swift */; settings = {ASSET_TAGS = (); }; };
+		B66F576D1BE3F13F0085E452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F576C1BE3F13F0085E452 /* AppDelegate.swift */; };
+		B66F576F1BE3F13F0085E452 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F576E1BE3F13F0085E452 /* ViewController.swift */; };
+		B66F57721BE3F13F0085E452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66F57701BE3F13F0085E452 /* Main.storyboard */; };
+		B66F57741BE3F13F0085E452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66F57731BE3F13F0085E452 /* Assets.xcassets */; };
+		B66F57771BE3F13F0085E452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66F57751BE3F13F0085E452 /* LaunchScreen.storyboard */; };
+		B66F57821BE3F13F0085E452 /* ListrDay5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F57811BE3F13F0085E452 /* ListrDay5Tests.swift */; };
+		B66F578D1BE3F13F0085E452 /* ListrDay5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F578C1BE3F13F0085E452 /* ListrDay5UITests.swift */; };
+		B66F579B1BE3F8790085E452 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B66F577E1BE3F13F0085E452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66F57611BE3F13F0085E452 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B66F57681BE3F13F0085E452;
+			remoteInfo = ListrDay5;
+		};
+		B66F57891BE3F13F0085E452 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B66F57611BE3F13F0085E452 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B66F57681BE3F13F0085E452;
+			remoteInfo = ListrDay5;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B6199B691BE4156D00D986EF /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		B66F57691BE3F13F0085E452 /* ListrDay5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListrDay5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66F576C1BE3F13F0085E452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B66F576E1BE3F13F0085E452 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B66F57711BE3F13F0085E452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B66F57731BE3F13F0085E452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B66F57761BE3F13F0085E452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B66F57781BE3F13F0085E452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66F577D1BE3F13F0085E452 /* ListrDay5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListrDay5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66F57811BE3F13F0085E452 /* ListrDay5Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListrDay5Tests.swift; sourceTree = "<group>"; };
+		B66F57831BE3F13F0085E452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66F57881BE3F13F0085E452 /* ListrDay5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListrDay5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66F578C1BE3F13F0085E452 /* ListrDay5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListrDay5UITests.swift; sourceTree = "<group>"; };
+		B66F578E1BE3F13F0085E452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B66F57661BE3F13F0085E452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F577A1BE3F13F0085E452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F57851BE3F13F0085E452 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B66F57601BE3F13F0085E452 = {
+			isa = PBXGroup;
+			children = (
+				B66F576B1BE3F13F0085E452 /* ListrDay5 */,
+				B66F57801BE3F13F0085E452 /* ListrDay5Tests */,
+				B66F578B1BE3F13F0085E452 /* ListrDay5UITests */,
+				B66F576A1BE3F13F0085E452 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B66F576A1BE3F13F0085E452 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B66F57691BE3F13F0085E452 /* ListrDay5.app */,
+				B66F577D1BE3F13F0085E452 /* ListrDay5Tests.xctest */,
+				B66F57881BE3F13F0085E452 /* ListrDay5UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B66F576B1BE3F13F0085E452 /* ListrDay5 */ = {
+			isa = PBXGroup;
+			children = (
+				B66F576C1BE3F13F0085E452 /* AppDelegate.swift */,
+				B66F576E1BE3F13F0085E452 /* ViewController.swift */,
+				B66F57701BE3F13F0085E452 /* Main.storyboard */,
+				B66F57731BE3F13F0085E452 /* Assets.xcassets */,
+				B66F57751BE3F13F0085E452 /* LaunchScreen.storyboard */,
+				B66F57781BE3F13F0085E452 /* Info.plist */,
+				B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */,
+				B6199B691BE4156D00D986EF /* ToDoItem.swift */,
+			);
+			path = ListrDay5;
+			sourceTree = "<group>";
+		};
+		B66F57801BE3F13F0085E452 /* ListrDay5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B66F57811BE3F13F0085E452 /* ListrDay5Tests.swift */,
+				B66F57831BE3F13F0085E452 /* Info.plist */,
+			);
+			path = ListrDay5Tests;
+			sourceTree = "<group>";
+		};
+		B66F578B1BE3F13F0085E452 /* ListrDay5UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B66F578C1BE3F13F0085E452 /* ListrDay5UITests.swift */,
+				B66F578E1BE3F13F0085E452 /* Info.plist */,
+			);
+			path = ListrDay5UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B66F57681BE3F13F0085E452 /* ListrDay5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B66F57911BE3F13F0085E452 /* Build configuration list for PBXNativeTarget "ListrDay5" */;
+			buildPhases = (
+				B66F57651BE3F13F0085E452 /* Sources */,
+				B66F57661BE3F13F0085E452 /* Frameworks */,
+				B66F57671BE3F13F0085E452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ListrDay5;
+			productName = ListrDay5;
+			productReference = B66F57691BE3F13F0085E452 /* ListrDay5.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B66F577C1BE3F13F0085E452 /* ListrDay5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B66F57941BE3F13F0085E452 /* Build configuration list for PBXNativeTarget "ListrDay5Tests" */;
+			buildPhases = (
+				B66F57791BE3F13F0085E452 /* Sources */,
+				B66F577A1BE3F13F0085E452 /* Frameworks */,
+				B66F577B1BE3F13F0085E452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B66F577F1BE3F13F0085E452 /* PBXTargetDependency */,
+			);
+			name = ListrDay5Tests;
+			productName = ListrDay5Tests;
+			productReference = B66F577D1BE3F13F0085E452 /* ListrDay5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B66F57871BE3F13F0085E452 /* ListrDay5UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B66F57971BE3F13F0085E452 /* Build configuration list for PBXNativeTarget "ListrDay5UITests" */;
+			buildPhases = (
+				B66F57841BE3F13F0085E452 /* Sources */,
+				B66F57851BE3F13F0085E452 /* Frameworks */,
+				B66F57861BE3F13F0085E452 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B66F578A1BE3F13F0085E452 /* PBXTargetDependency */,
+			);
+			name = ListrDay5UITests;
+			productName = ListrDay5UITests;
+			productReference = B66F57881BE3F13F0085E452 /* ListrDay5UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B66F57611BE3F13F0085E452 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = HConnery;
+				TargetAttributes = {
+					B66F57681BE3F13F0085E452 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					B66F577C1BE3F13F0085E452 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = B66F57681BE3F13F0085E452;
+					};
+					B66F57871BE3F13F0085E452 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = B66F57681BE3F13F0085E452;
+					};
+				};
+			};
+			buildConfigurationList = B66F57641BE3F13F0085E452 /* Build configuration list for PBXProject "ListrDay5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B66F57601BE3F13F0085E452;
+			productRefGroup = B66F576A1BE3F13F0085E452 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B66F57681BE3F13F0085E452 /* ListrDay5 */,
+				B66F577C1BE3F13F0085E452 /* ListrDay5Tests */,
+				B66F57871BE3F13F0085E452 /* ListrDay5UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B66F57671BE3F13F0085E452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66F57771BE3F13F0085E452 /* LaunchScreen.storyboard in Resources */,
+				B66F57741BE3F13F0085E452 /* Assets.xcassets in Resources */,
+				B66F57721BE3F13F0085E452 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F577B1BE3F13F0085E452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F57861BE3F13F0085E452 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B66F57651BE3F13F0085E452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66F576F1BE3F13F0085E452 /* ViewController.swift in Sources */,
+				B66F576D1BE3F13F0085E452 /* AppDelegate.swift in Sources */,
+				B6199B6A1BE4156D00D986EF /* ToDoItem.swift in Sources */,
+				B66F579B1BE3F8790085E452 /* ToDoListTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F57791BE3F13F0085E452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66F57821BE3F13F0085E452 /* ListrDay5Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B66F57841BE3F13F0085E452 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66F578D1BE3F13F0085E452 /* ListrDay5UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B66F577F1BE3F13F0085E452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B66F57681BE3F13F0085E452 /* ListrDay5 */;
+			targetProxy = B66F577E1BE3F13F0085E452 /* PBXContainerItemProxy */;
+		};
+		B66F578A1BE3F13F0085E452 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B66F57681BE3F13F0085E452 /* ListrDay5 */;
+			targetProxy = B66F57891BE3F13F0085E452 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B66F57701BE3F13F0085E452 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B66F57711BE3F13F0085E452 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B66F57751BE3F13F0085E452 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B66F57761BE3F13F0085E452 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B66F578F1BE3F13F0085E452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B66F57901BE3F13F0085E452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B66F57921BE3F13F0085E452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ListrDay5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hconnery.ListrDay5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B66F57931BE3F13F0085E452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ListrDay5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hconnery.ListrDay5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B66F57951BE3F13F0085E452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ListrDay5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hconnery.ListrDay5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListrDay5.app/ListrDay5";
+			};
+			name = Debug;
+		};
+		B66F57961BE3F13F0085E452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ListrDay5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hconnery.ListrDay5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListrDay5.app/ListrDay5";
+			};
+			name = Release;
+		};
+		B66F57981BE3F13F0085E452 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ListrDay5UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hconnery.ListrDay5UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ListrDay5;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B66F57991BE3F13F0085E452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ListrDay5UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hconnery.ListrDay5UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ListrDay5;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B66F57641BE3F13F0085E452 /* Build configuration list for PBXProject "ListrDay5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66F578F1BE3F13F0085E452 /* Debug */,
+				B66F57901BE3F13F0085E452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B66F57911BE3F13F0085E452 /* Build configuration list for PBXNativeTarget "ListrDay5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66F57921BE3F13F0085E452 /* Debug */,
+				B66F57931BE3F13F0085E452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B66F57941BE3F13F0085E452 /* Build configuration list for PBXNativeTarget "ListrDay5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66F57951BE3F13F0085E452 /* Debug */,
+				B66F57961BE3F13F0085E452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B66F57971BE3F13F0085E452 /* Build configuration list for PBXNativeTarget "ListrDay5UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66F57981BE3F13F0085E452 /* Debug */,
+				B66F57991BE3F13F0085E452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B66F57611BE3F13F0085E452 /* Project object */;
+}
