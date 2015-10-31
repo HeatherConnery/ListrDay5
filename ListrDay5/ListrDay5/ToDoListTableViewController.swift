@@ -8,11 +8,20 @@
 
 import UIKit
 
+/*
+Our ToDoListTableViewController is a custom subclass of UITAbleViewController
+UITAbleViewController automatically creates a UITAbleView object that you access through the tableView property
+If no nib files are created, it sets datasource and delegate of the tableView to self?
+*/
 class ToDoListTableViewController: UITableViewController {
     
     var toDoItems: NSMutableArray = []
     
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        if let source: ViewController = segue.sourceViewController as? ViewController, item: ToDoItem = source.toDoItem {
+            self.toDoItems.addObject(item)
+            self.tableView.reloadData()
+        }
         
     }
     
@@ -54,26 +63,53 @@ class ToDoListTableViewController: UITableViewController {
         return self.toDoItems.count
     }
     
-//    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-//        
-//        let CellIndentifier: NSString = "ListPrototypeCell"
-//        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellIndentifier) as UITableViewCell
-//        var todoitem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as ToDoItemcell.textLabel.text = todoitem.itemName
-//        
+
+
+//    //asks the datasource for a cell to insert at a particular row index within the table view
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        //create local var to reference the prototype cell's identifier (set in main)
+//        let CellIndentifier = "ListPrototypeCell"
+//        //create local var that is an instance of UITableviewCell class (generic cell object)
+//        var cell = UITableViewCell()
+//        /*dequeueReusableCellWithIdentifier is a func in class UITableView, tableView (the obj) is an instance of UITableView, so it has access to it
+//        it returns an obj of type UITableViewCell?
+//        */
+//        if let tempCell = tableView.dequeueReusableCellWithIdentifier(CellIndentifier) {
+//            //if I get a UITableViewCell back from that identifier
+//            //create an instance of the class ToDoItem and set it to the array item with array index = to the indexPath.row. We force unwrap this array item as type ToDoItem (our class)
+//            if let todoitem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as? ToDoItem {
+//            //set the temp cell's text property of the textLabel to todoitem's itemName property value
+//            tempCell.textLabel?.text = String(todoitem.itemName)
+//            cell = tempCell
+//            }
+//        }
 //        return cell
+//
 //    }
-
+    
+    //Combine the two if let statements from the version above:
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let CellIndentifier = "ListPrototypeCell"
-        var cell = UITableViewCell()
-        if let tempcell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(CellIndentifier) {
-            var todoitem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
-            cell.textLabel?.text = todoitem.itemName
         
-        return cell
+        let CellIdentifier = "ListPrototypeCell"
+        var cell = UITableViewCell()
+        
+        //the dequeue func returns a reusable cell located by the specified identifier
+        if let tempCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier), todoitem = self.toDoItems.objectAtIndex(indexPath.row) as? ToDoItem {
+            tempCell.textLabel?.text = String(todoitem.itemName)
+            
+            if todoitem.completed {
+                tempCell.accessoryType = .Checkmark
+            } else{
+                tempCell.accessoryType = .None
+            }
+            
+            cell = tempCell
         }
-
+        return cell
     }
+    
+    
+    
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -83,6 +119,13 @@ class ToDoListTableViewController: UITableViewController {
         return cell
     }
     */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        var tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
+        tappedItem.completed = !tappedItem.completed
+        tableView.reloadData()
+    }
+
 
     /*
     // Override to support conditional editing of the table view.

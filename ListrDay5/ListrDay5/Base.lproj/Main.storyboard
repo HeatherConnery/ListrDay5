@@ -44,6 +44,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="doneButton" destination="Zra-Zi-ZBi" id="5YY-IT-bN1"/>
+                        <outlet property="textField" destination="J4U-Vf-Lmk" id="f7d-0W-bYr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="wI4-cx-usV" userLabel="Exit" sceneMemberID="exit"/>

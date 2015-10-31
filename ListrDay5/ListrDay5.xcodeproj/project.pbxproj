@@ -102,12 +102,12 @@
 			isa = PBXGroup;
 			children = (
 				B66F576C1BE3F13F0085E452 /* AppDelegate.swift */,
+				B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */,
 				B66F576E1BE3F13F0085E452 /* ViewController.swift */,
 				B66F57701BE3F13F0085E452 /* Main.storyboard */,
 				B66F57731BE3F13F0085E452 /* Assets.xcassets */,
 				B66F57751BE3F13F0085E452 /* LaunchScreen.storyboard */,
 				B66F57781BE3F13F0085E452 /* Info.plist */,
-				B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */,
 				B6199B691BE4156D00D986EF /* ToDoItem.swift */,
 			);
 			path = ListrDay5;
