@@ -16,6 +16,7 @@
 		B66F57821BE3F13F0085E452 /* ListrDay5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F57811BE3F13F0085E452 /* ListrDay5Tests.swift */; };
 		B66F578D1BE3F13F0085E452 /* ListrDay5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F578C1BE3F13F0085E452 /* ListrDay5UITests.swift */; };
 		B66F579B1BE3F8790085E452 /* ToDoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B6EBD6FC1BE6B8AC0027BA09 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EBD6FB1BE6B8AC0027BA09 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B66F578C1BE3F13F0085E452 /* ListrDay5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListrDay5UITests.swift; sourceTree = "<group>"; };
 		B66F578E1BE3F13F0085E452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListTableViewController.swift; sourceTree = "<group>"; };
+		B6EBD6FB1BE6B8AC0027BA09 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +103,14 @@
 		B66F576B1BE3F13F0085E452 /* ListrDay5 */ = {
 			isa = PBXGroup;
 			children = (
-				B66F576C1BE3F13F0085E452 /* AppDelegate.swift */,
-				B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */,
-				B66F576E1BE3F13F0085E452 /* ViewController.swift */,
-				B66F57701BE3F13F0085E452 /* Main.storyboard */,
+				B6EBD6F51BE6B1C70027BA09 /* AppDelegate */,
+				B6EBD6F61BE6B1FE0027BA09 /* Storyboards */,
+				B6EBD6F71BE6B2070027BA09 /* Views */,
+				B6EBD6F81BE6B20D0027BA09 /* ViewControllers */,
+				B6EBD6F91BE6B21C0027BA09 /* Models */,
+				B6EBD6FA1BE6B28E0027BA09 /* ModelControllers */,
 				B66F57731BE3F13F0085E452 /* Assets.xcassets */,
-				B66F57751BE3F13F0085E452 /* LaunchScreen.storyboard */,
 				B66F57781BE3F13F0085E452 /* Info.plist */,
-				B6199B691BE4156D00D986EF /* ToDoItem.swift */,
 			);
 			path = ListrDay5;
 			sourceTree = "<group>";
@@ -129,6 +131,55 @@
 				B66F578E1BE3F13F0085E452 /* Info.plist */,
 			);
 			path = ListrDay5UITests;
+			sourceTree = "<group>";
+		};
+		B6EBD6F51BE6B1C70027BA09 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B66F576C1BE3F13F0085E452 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B6EBD6F61BE6B1FE0027BA09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B66F57751BE3F13F0085E452 /* LaunchScreen.storyboard */,
+				B66F57701BE3F13F0085E452 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		B6EBD6F71BE6B2070027BA09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B6EBD6F81BE6B20D0027BA09 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B66F579A1BE3F8790085E452 /* ToDoListTableViewController.swift */,
+				B66F576E1BE3F13F0085E452 /* ViewController.swift */,
+				B6EBD6FB1BE6B8AC0027BA09 /* DetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B6EBD6F91BE6B21C0027BA09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6199B691BE4156D00D986EF /* ToDoItem.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B6EBD6FA1BE6B28E0027BA09 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +314,7 @@
 			files = (
 				B66F576F1BE3F13F0085E452 /* ViewController.swift in Sources */,
 				B66F576D1BE3F13F0085E452 /* AppDelegate.swift in Sources */,
+				B6EBD6FC1BE6B8AC0027BA09 /* DetailViewController.swift in Sources */,
 				B6199B6A1BE4156D00D986EF /* ToDoItem.swift in Sources */,
 				B66F579B1BE3F8790085E452 /* ToDoListTableViewController.swift in Sources */,
 			);

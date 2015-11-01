@@ -16,6 +16,7 @@ If no nib files are created, it sets datasource and delegate of the tableView to
 class ToDoListTableViewController: UITableViewController {
     
     var toDoItems: NSMutableArray = []
+    var currentIndex: Int = 0
     
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
         if let source: ViewController = segue.sourceViewController as? ViewController, item: ToDoItem = source.toDoItem {
@@ -26,19 +27,19 @@ class ToDoListTableViewController: UITableViewController {
     }
     
     
-    func loadInitialData(){
-        var item1 = ToDoItem(name: "Buy milk")
-        self.toDoItems.addObject(item1)
-        var item2 = ToDoItem(name: "Buy eggs")
-        self.toDoItems.addObject(item2)
-        var item3 = ToDoItem(name: "Read a book")
-        self.toDoItems.addObject(item3)
-    }
+//    func loadInitialData(){
+//        var item1 = ToDoItem(name: "Buy milk")
+//        self.toDoItems.addObject(item1)
+//        var item2 = ToDoItem(name: "Buy eggs")
+//        self.toDoItems.addObject(item2)
+//        var item3 = ToDoItem(name: "Read a book")
+//        self.toDoItems.addObject(item3)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadInitialData()
+        //loadInitialData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -65,43 +66,32 @@ class ToDoListTableViewController: UITableViewController {
     
 
 
-//    //asks the datasource for a cell to insert at a particular row index within the table view
-//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        //create local var to reference the prototype cell's identifier (set in main)
-//        let CellIndentifier = "ListPrototypeCell"
-//        //create local var that is an instance of UITableviewCell class (generic cell object)
-//        var cell = UITableViewCell()
-//        /*dequeueReusableCellWithIdentifier is a func in class UITableView, tableView (the obj) is an instance of UITableView, so it has access to it
-//        it returns an obj of type UITableViewCell?
-//        */
-//        if let tempCell = tableView.dequeueReusableCellWithIdentifier(CellIndentifier) {
-//            //if I get a UITableViewCell back from that identifier
-//            //create an instance of the class ToDoItem and set it to the array item with array index = to the indexPath.row. We force unwrap this array item as type ToDoItem (our class)
-//            if let todoitem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as? ToDoItem {
-//            //set the temp cell's text property of the textLabel to todoitem's itemName property value
-//            tempCell.textLabel?.text = String(todoitem.itemName)
-//            cell = tempCell
-//            }
-//        }
-//        return cell
-//
-//    }
+
     
-    //Combine the two if let statements from the version above:
+    //asks the datasource for a cell to insert at a particular row index within the table view
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+        //create local var to reference the prototype cell's identifier (set in main)
         let CellIdentifier = "ListPrototypeCell"
+        //create local var that is an instance of UITableviewCell class (generic cell object)
         var cell = UITableViewCell()
         
+        /*dequeueReusableCellWithIdentifier is a func in class UITableView, tableView (the obj) is an instance of UITableView, so it has access to it
+        //        it returns an obj of type UITableViewCell?
+        //        */
         //the dequeue func returns a reusable cell located by the specified identifier
         if let tempCell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier), todoitem = self.toDoItems.objectAtIndex(indexPath.row) as? ToDoItem {
+            //if I get a UITableViewCell back from that identifier
+            //            //create an instance of the class ToDoItem and set it to the array item with array index = to the indexPath.row. We force unwrap this array item as type ToDoItem (our class)
+            
+            //set the temp cell's text property of the textLabel to todoitem's itemName property value
             tempCell.textLabel?.text = String(todoitem.itemName)
             
-            if todoitem.completed {
-                tempCell.accessoryType = .Checkmark
-            } else{
-                tempCell.accessoryType = .None
-            }
+            //This code toggles check marks in list view of to-do items
+//            if todoitem.completed {
+//                tempCell.accessoryType = .Checkmark
+//            } else{
+//                tempCell.accessoryType = .None
+//            }
             
             cell = tempCell
         }
@@ -110,22 +100,14 @@ class ToDoListTableViewController: UITableViewController {
     
     
     
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        var tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
-        tappedItem.completed = !tappedItem.completed
-        tableView.reloadData()
+//        var tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
+//        tappedItem.completed = !tappedItem.completed
+//        tableView.reloadData()
+      currentIndex = indexPath.row
+    
+         
     }
-
 
     /*
     // Override to support conditional editing of the table view.
@@ -135,17 +117,20 @@ class ToDoListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+
 
     /*
     // Override to support rearranging the table view.
@@ -162,14 +147,28 @@ class ToDoListTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+         //Get the new view controller using segue.destinationViewController.
+         //Pass the selected object to the new view controller.
+        if segue.identifier == "detailView" {
+           if let detailViewController = segue.destinationViewController as? DetailViewController {
+//                detailViewController.itemNameString = "Name of item"
+//                detailViewController.creationDateString = "01/01/01"
+//                detailViewController.completedStatusString = "Not completed"
+            
+                detailViewController.itemNameString = toDoItems.objectAtIndex(currentIndex).itemName
+                //detailViewController.creationDateString = toDoItems.objectAtIndex(currentIndex).creationDate
+                //detailViewController.completedStatusString = toDoItems.objectAtIndex(currentIndex).completed
+            }
 
+        }
+    }
+
+    
+    
+    
 }
