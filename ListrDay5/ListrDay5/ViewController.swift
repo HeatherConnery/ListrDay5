@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         if self.textField.text?.utf16.count > 0 {
             //Before sequeing back to tableView, check if textField isn't empty, if so set toDoItem as instance of ToDoItem class
             //which is inititalized with whatever is in text field as it's itemName property
-            self.toDoItem = ToDoItem(name: self.textField.text!)
+            self.toDoItem = ToDoItem(name: self.textField.text!, complete: "true", createDate: NSDate())
             
             //dismiss the keyboard when background is touched - NOT SEEING KEYBOARD IN SIMULATOR?
             func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {

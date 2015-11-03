@@ -16,10 +16,11 @@ If no nib files are created, it sets datasource and delegate of the tableView to
 class ToDoListTableViewController: UITableViewController {
     
     var toDoItems: NSMutableArray = []
-    var currentIndex: Int = 0
+    
     
     @IBAction func unwindToVC(segue: UIStoryboardSegue) {
-        if let source: ViewController = segue.sourceViewController as? ViewController, item: ToDoItem = source.toDoItem {
+        if let source: ViewController = segue.sourceViewController as? ViewController,
+            item: ToDoItem = source.toDoItem {
             self.toDoItems.addObject(item)
             self.tableView.reloadData()
         }
@@ -104,7 +105,7 @@ class ToDoListTableViewController: UITableViewController {
 //        var tappedItem: ToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as! ToDoItem
 //        tappedItem.completed = !tappedItem.completed
 //        tableView.reloadData()
-      currentIndex = indexPath.row
+      
     
          
     }
@@ -122,8 +123,10 @@ class ToDoListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            self.toDoItems.removeObjectAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
+            tableView.reloadData()
             
             
         } else if editingStyle == .Insert {
@@ -156,13 +159,11 @@ class ToDoListTableViewController: UITableViewController {
          //Pass the selected object to the new view controller.
         if segue.identifier == "detailView" {
            if let detailViewController = segue.destinationViewController as? DetailViewController {
-//                detailViewController.itemNameString = "Name of item"
-//                detailViewController.creationDateString = "01/01/01"
-//                detailViewController.completedStatusString = "Not completed"
-            
-                detailViewController.itemNameString = toDoItems.objectAtIndex(currentIndex).itemName
-                //detailViewController.creationDateString = toDoItems.objectAtIndex(currentIndex).creationDate
-                //detailViewController.completedStatusString = toDoItems.objectAtIndex(currentIndex).completed
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
+                
+                detailViewController.myObject = toDoItems[indexPath.row] as! ToDoItem
+
+            }
             }
 
         }

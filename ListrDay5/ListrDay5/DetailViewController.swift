@@ -14,25 +14,22 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var creationDate: UILabel!
     @IBOutlet weak var completedStatus: UILabel!
     
-    var itemNameString: NSString?
-    var creationDateString: NSDate?
-    var completedStatusString: Bool?
+//    var itemNameString: NSString?
+//    var creationDateString: NSDate?
+//    var completedStatusString: Bool?
+    
+    var myObject:ToDoItem!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let nameString = itemNameString as? String {
-            itemName.text = nameString
-        }
-        
-//        if let creationString = creationDateString {
-//            creationDate.text = creationString
-//        }
-//        
-//        if let completedString = completedStatusString {
-//            completedStatus.text = completedString
-//        }
+
+        itemName.text = myObject.itemName as String
+        creationDate.text  = "\(myObject.creationDate)"
+        //completedStatus.text = "\(myObject.completed)"
+        completedStatus.text = myObject.completed
+
 
         // Do any additional setup after loading the view.
          

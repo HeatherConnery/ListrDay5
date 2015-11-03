@@ -11,11 +11,21 @@ import UIKit
 class ToDoItem: NSObject {
     
     var itemName: NSString = ""
-    var completed: Bool = false
-    var creationDate: NSDate = NSDate()
+    var completed: String = "" // = false
+    var creationDate: NSDate!// = NSDate()
     
-    init(name: String){
+//    var _completed:String {
+//        return completed
+//    }
+//    var _createDate:String {
+//        return creationDate
+//    }
+    
+    init(name: String, complete:String, createDate:NSDate){
         self.itemName = name
+        self.completed = complete
+        self.creationDate = createDate
+        
     }
 
 }
